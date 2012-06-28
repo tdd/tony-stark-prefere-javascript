@@ -1,0 +1,362 @@
+<!doctype html>  
+<html lang="en">
+  
+  <head>
+    <meta charset="utf-8">
+    
+    <title>Tony Stark préfère JavaScript • W3Café Paris 29/06/2012</title>
+
+    <meta name="description" content="FIXME">
+    <meta name="author" content="Christophe Porteneuve">
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    
+    <link href='http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/print.css" type="text/css" media="print">
+
+    <link rel="stylesheet" href="lib/zenburn.css">
+  </head>
+  
+  <body>
+    
+    <div class="reveal">
+
+      <!-- Used to fade in a background when a specific slide state is reached -->
+      <div class="state-background"></div>
+      
+      <!-- Any section element inside of this container is displayed as a slide -->
+      <div class="slides">
+        <section>
+          <h1>Tony Stark préfère JavaScript</h1>
+          <h3 class="inverted">(et ça se comprend)</h3>
+          <h4>Christophe Porteneuve @ W3Café • 29/06/2012, Paris</h4>
+          <script>
+            // Delicously hacky. Look away.
+            if( navigator.userAgent.match( /(iPhone|iPad|iPod|Android)/i ) ) document.write( '<p style="color: rgba(0,0,0,0.3); text-shadow: none;">('+'Tap to navigate'+')</p>' );
+          </script>
+        </section>
+        
+        <section id="intro">
+          <!-- 5' -->
+          <section>
+            <h1>Politesses d’usage</h1>
+
+            <p>Christophe Porteneuve</p>
+            <p>Ciblo, Delicious Insights, Paris-Web</p>
+            <p>Git Attitude, JS Attitude</p>
+            <p>Git, Rails, «&nbsp;HTML5&nbsp;», JavaScript/CoffeeScript…</p>
+            <p><code>@porteneuve</code></p>
+          </section>
+
+          <section>
+            <h1>Le thème de l’atelier</h1>
+            
+            <p>Sortir de la vision superficielle et surannée de JavaScript</p>
+            <p>
+              Faire un tour d’horizon de JS et son écosystème moderne<br/>
+              (bibliothèques, technologies «&nbsp;natives&nbsp;», etc.)
+            </p>
+            <p>Montrer la <strong>puissance</strong></p>
+            <p><strong>Donner envie&nbsp;!</strong></p>
+          </section>
+          
+          <section>
+            <h1>Why Tony Stark?!</h1>
+            
+            <p class="fragment">Parce qu’il <strong>arrache</strong>&nbsp;!</p>
+            <p class="fragment">Tony Stark c’est un peu Géo Trouvetout mais avec <strong>la classe</strong>, le <strong>bagou</strong>, sans parler de la frime…</p>
+            <p class="fragment">…et il aime la techno qui <strong>déchire</strong></p>
+            <p class="fragment">(qui envoie du bois)</p>
+            <p class="fragment">(qui roxxe des poneys)</p>
+            <p class="fragment">Du coup, le choix était <strong>évident</strong> (si si)</p>
+          </section>
+          
+          <section>
+            <h1>Plan d’attaque</h1>
+            
+            <ol>
+              <li class="fragment"><strong>Dépoussierer</strong> l’image de JavaScript</li>
+              <li class="fragment">Montrer qu’on peut faire du JS de <strong>très haute qualité</strong></li>
+              <li class="fragment">Halluciner sur les technos modernes <strong>dans le navigateur</strong></li>
+              <li class="fragment">Halluciner sur les technos modernes <strong>hors du navigateur</strong></li>
+              <li class="fragment">Réaliser que JS est un moyen, pas une fin.  Une <strong>runtime</strong>.</li>
+              <li class="fragment">Pouvoir aller <strong>plus loin</strong></li>
+              <li class="fragment">Conclure</li>
+            </ol>
+          </section>
+        </section>
+        
+        <section id="traditional-view">
+          <!-- 2' -->
+          <h1>Mamie pense que…</h1>
+          <h4>(l’image éculée mais persistente de JavaScript)</h4>
+
+          <p class="fragment">
+            <q>C’est un <strong>jouet</strong></q><br/>
+            (applets, marquees, <strong>validation de formulaire</strong>)
+          </p>
+          <p class="fragment"><q>C’est <strong>lent</strong></q></p>
+          <h3 class="fragment">
+            <span>NON.</span>
+            <span class="fragment">NON.</span>
+            <span class="fragment">NON&nbsp;!</span>
+          </h3>
+          <p class="fragment">Langage typé, <strong>dynamique</strong>, <strong>fonctionnel</strong>, prototypal, <strong>rapide</strong></p>
+        </section>
+        
+        <section id="jquery">
+          <!-- 3' -->
+          <h1>JS vs. jQuery</h1>
+          <h4>(ne pas confondre)</h4>
+          <h4 class="fragment">(ni avec <a href="http://en.wikipedia.org/wiki/Jake_Weary" target="_blank">Jake Weary</a>)</h4>
+          
+          <p class="fragment">JavaScript est un <strong>langage</strong></p>
+          <p class="fragment">(JavaScript est <strong>le</strong> langage&nbsp;!)</p>
+          <p class="fragment">jQuery est une <strong>bibliothèque</strong> (qui a un énorme succès)</p>
+          <p class="fragment">jQuery est un <strong>DSL</strong> pour le DOM, les CSS, l’Ajax…</p>
+          <p class="fragment">Beaucoup trop de gens connaissent bien jQuery et…</p>
+          <p class="fragment">…(à peu près) rien à JavaScript&nbsp;!</p>
+        </section>
+        
+        <section id="robust">
+          <!-- 15' -->
+          <section>
+            <h1>JS blindé</h1>
+            
+            <p>Côté backend, vous faites ça bien, non&nbsp;?</p>
+            <p class="fragment">
+              Structurer.
+              <span class="fragment">Tester.</span>
+              <span class="fragment">Documenter.</span>
+              <span class="fragment">Surveiller.</span>
+              <span class="fragment">Auditer.</span>
+            </p>
+            <p class="fragment">Je veux dire, même pour du <strong>PHP</strong>, vous faites ça.  Un peu.</p>
+            <p class="fragment">Même pour de l’<strong>ASP</strong>, quoi&nbsp;!  C’est dire&nbsp;!</p>
+            <p class="fragment">Et JS, rien&nbsp;!  Si, avouez, rien&nbsp;!  C’est le dawa&nbsp;!</p>
+            <p class="fragment">C’est quoi ce délire&nbsp;?  On est schyzophrènes ou quoi&nbsp;?</p>
+            <p class="fragment">Pourtant, on n’a <strong>aucune excuse</strong>.  Y’a tout ce qu’il faut.</p>
+          </section>
+          
+          <section>
+            <h1>Structurer son JS</h1>
+
+            <p>Au minimum, comprendre et exploiter le <em><a href="http://www.adequatelygood.com/2010/3/JavaScript-Module-Pattern-In-Depth/" target="_blank">module pattern</a></em></p>
+            <p class="fragment">
+              Les modules (essayer, c’est adopter&nbsp;!)&nbsp;: à la sauce
+              <a href="http://www.commonjs.org/" target="_blank">CommonJS</a>
+              ou
+              <a href="https://github.com/amdjs/amdjs-api/wiki/AMD" target="_blank">AMD</a>
+              (et bientôt <a href="http://addyosmani.com/writing-modular-js/">en natif</a>)
+            </p>
+            <p class="fragment"><q>Oui mais plein de fichiers c’est le mal&nbsp;! HTTP ça rame&nbsp;!</q></p>
+            <p class="fragment">X fichiers en dev ≠ X fichiers en prod&nbsp;!</p>
+            <p class="fragment">
+              Outils de build&nbsp;!
+              <a href="https://github.com/sstephenson/sprockets" target="_blank">Sprockets</a>,
+              <a href="http://brunch.io/" target="_blank">Brunch</a>,
+              <a href="http://yeoman.io/" target="_blank">Yeoman</a>,
+              et tous ceux inclus dans les (bons) frameworks
+            </p>
+          </section>
+          
+          <section>
+            <h1>Tester son JS</h1>
+            
+            <p class="fragment">U
+              Unitaires avec <a href="http://docs.jquery.com/QUnit" target="_blank">QUnit</a>.
+              Intégration avec <a href="http://pivotal.github.com/jasmine/" target="_blank">Jasmine</a>.
+            </p>
+            <p class="fragment">Mais Tony sez: <a href="http://visionmedia.github.com/mocha/" target="_blank">Mocha</a>!</p>
+            <p class="fragment">Bien sûr, y’a aussi <a href="http://seleniumhq.org/" target="_blank">Selenium</a>…</p>
+            <p class="fragment">
+              …mais pour la CI, j’adore
+              <a href="http://phantomjs.org/" target="_blank">PhantomJS</a> et
+              <a href="http://casperjs.org/" target="_blank">CasperJS</a>&nbsp;!
+            </p>
+            <p class="fragment">Sans oublier la surcouche sympa de <a href="http://busterjs.org/" target="_blank">BusterJS</a>…</p>
+            <p class="fragment">
+              Et connaissez-vous
+              <a href="http://www.browserstack.com/" target="_blank">BrowserStack</a>
+              et
+              <a href="https://github.com/ryanseddon/bunyip" target="_blank">bunyip</a>&nbsp;?
+            </p>
+          </section>
+          
+          <section>
+            <h1>Documenter son JS</h1>
+            
+            <p>
+              La solution traditionnelle est <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JSDoc</a>.
+              <strong>Beuargh&nbsp;!</strong>
+            </p>
+            <p class="fragment">
+              Bon, après, si vous voulez pondre une doc très «&nbsp;référence API&nbsp;»…  J’aime bien
+              <a href="http://pdoc.org/" target="_blank">PDoc</a>.
+            </p>
+            <p class="fragment">
+              Le <em>literate programming</em> fait un retour en force et c’est très bien.  L’outil de référence, tout simple, est <a href="http://jashkenas.github.com/docco/" target="_blank">Docco</a>.
+            </p>
+            <p class="fragment">Pour les fondamentaux, y’a <a href="http://dochub.io/#javascript/" target="_blank">dochub.io</a>…</p>
+            <p class="fragment">…et pour les vôtres, pourquoi pas <a href="http://readthedocs.org" target="_blank">readthedocs.org</a>&nbsp;?</p>
+          </section>
+          
+          <section>
+            <h1>Surveiller son JS</h1>
+            
+            <p>Côté serveur, vous avez sans doute un <em>exception reporting</em> en place, non&nbsp;?  Mais <strong>pas côté client</strong>.</p>
+            <p class="fragment">Tsk, tsk.</p>
+            <div class="fragment">
+              <p>
+                Plusieurs SaaS ces derniers mois, notamment<br/>
+                <a href="http://errorception.com/" target="_blank">errorception</a> et
+                <a href="https://www.proxino.com/" target="_blank">Proxino</a>.
+              </p>
+              <p>Une mine d’or d’informations sur des bugs pas toujours reproductibles en dev/CI.</p>
+            </div>
+          </section>
+          
+          <section>
+            <h1>Auditer son JS</h1>
+            
+            <h3>Auditer les bonnes pratiques</h3>
+            <p class="fragment">
+              <a href="http://www.jslint.com/" target="_blank">JSLint</a>.
+              Les bons éditeurs peuvent le lancer en sauvant ;-)
+            </p>
+            <p class="fragment">Tony désapprouve&nbsp;: <a href="http://www.jshint.com/" target="_blank">JSHint</a></p>
+            <h3>Auditer les performances</h3>
+            <p class="fragment">
+              En console web&nbsp;:
+              <a href="http://jtaby.com/2012/04/23/modern-web-development-part-1.html#The%20Network%20Panel%20"><em>waterfall</em></a>,
+              <a href="http://jtaby.com/2012/04/23/modern-web-development-part-1.html#The%20Timeline%20Panel%20">timeline</a>,
+              <a href="http://jtaby.com/2012/04/23/modern-web-development-part-1.html#Memory%20">mémoire</a>,
+              <a href="http://jtaby.com/2012/04/23/modern-web-development-part-1.html#The%20Profiles%20Panel%20">profiling</a>…
+            </p>
+            <p class="fragment">En <em>crowdsourcing</em>&nbsp;: <a href="http://jsperf.com/">JSPerf</a></p>
+          </section>
+        </section>
+        
+        <section id="crazy-client">
+          <!-- 20' -->
+          <section>
+            <h1>JS de fou côté client</h1>
+            <p>ES5, ES6, Harmony, ecosys: offline/appcache, storage[LS/IDB/FS], connectivity [WS/SSE],</p>
+            <p>gfx [Canvas, WebGL, SVG, webfonts, reqAF/timing, CSS3-4 & CSS Filters], multimedia [A,V,AD API],</p>
+            <p>DAP [orientation, camera, contacts, gamepad], UX [fullscreen, pointer lock, dragdrop, web workers], Geoloc…)</p>
+            <p>-> Gros centre d'intérêt pour les game developers, notamment</p>
+            <p>-> B2G/Gaia ; avant ça, WebOS (Palm/HP) ; Windows 8 / Metro ; Chrome App Store/Market? ; Mozilla Web Apps spec / upcoming std</p>
+            <p>-> PhoneGap, Titanium, etc.  Applis hybrides (retrouver le Top-10 App Store iOS).</p>
+          </section>
+        </section>
+        
+        <section id="outside-browsers">
+          <!-- 20' -->
+          <section>
+            <h1>JS hors du navigateur</h1>
+            
+            <p>JSC, PhantomJS et CasperJS, Node.js… moteurs V8, Rhino, SpiderMonkey?, etc.  Use-cases premiers pour Node,
+            idéalement quelques métriques/benchmarks, super stories e.g. Sashimi, etc.)</p>
+          </section>
+        </section>
+        
+        <section id="compilation-target">
+          <!-- 15' -->
+          <section>
+            <h1>JS comme langage cible</h1>
+            <p>(transpiling, et pas que CoffeeScript : Narcissus, Emscripten/LLJS, TameJS, ClosureScript, ADsafe, Roy…  Dart ;-))</p>
+            <p>-> https://github.com/jashkenas/coffee-script/wiki/List-of-languages-that-compile-to-JS</p>
+            <p>-> JS succeeds where Java failed.  JVM remains a prominent malware vector, e.g. Flashback.</p>
+            <p>-> http://www.zdnet.com/blog/security/cross-platform-malware-exploits-java-to-attack-pcs-and-macs/11739</p>
+          </section>
+        </section>
+        
+        <section id="further">
+          <!-- 10' -->
+          <section>
+            <h1>Où fouiller&nbsp;?</h1>
+            
+            <p>(ni Dev…z ni W3Schools, mais MDN, DailyJS, JS Weekly, prominent tweeters [Paul Rouget, Paul Irish, Brendan Eich, etc.], parisjs, w3café, meetups, JSConf.eu/us, Fluent, Backboneconf, Nodeconf, Nodejitsu, JS Attitude…)</p>
+          </section>
+        </section>
+        
+        <section id="wrap-up">
+          <!-- 15' -->
+          <section>
+            <h1>Conclusion</h1>
+            <p>(JS langage n°1 [trends Github à l'appui], vastes opportunités de carrière), remerciements, Q/R</p>
+          </section>
+        </section>
+      </div>
+
+      <!-- The navigational controls UI -->
+      <aside class="controls">
+        <a class="left" href="#">&#x25C4;</a>
+        <a class="right" href="#">&#x25BA;</a>
+        <a class="up" href="#">&#x25B2;</a>
+        <a class="down" href="#">&#x25BC;</a>
+      </aside>
+
+      <!-- Displays presentation progress, max value changes via JS to reflect # of slides -->
+      <div class="progress"><span></span></div>
+      
+    </div>
+
+    <!-- Optional libraries for code syntax highlighting and classList support in IE9 -->
+    <script src="lib/highlight.js"></script>
+    <script src="lib/classList.js"></script>
+    
+    <script src="js/reveal.js"></script>
+    
+    <script>
+      // Parse the query string into a key/value object
+      var query = {};
+      location.search.replace( /[A-Z0-9]+?=(\w*)/gi, function(a) {
+        query[ a.split( '=' ).shift() ] = a.split( '=' ).pop();
+      } );
+
+      // Fires when a slide with data-state=customevent is activated
+      Reveal.addEventListener( 'customevent', function() {
+        alert( '"customevent" has fired' );
+      } );
+
+      // Fires each time a new slide is activated
+      Reveal.addEventListener( 'slidechanged', function( event ) {
+        // event.previousSlide, event.currentSlide, event.indexh, event.indexv
+      } );
+
+      Reveal.initialize({
+        // Display controls in the bottom right corner
+        controls: true,
+
+        // Display a presentation progress bar
+        progress: true,
+
+        // If true; each slide will be pushed to the browser history
+        history: true,
+
+        // Loops the presentation, defaults to false
+        loop: false,
+
+        // Flags if mouse wheel navigation should be enabled
+        mouseWheel: true,
+
+        // Apply a 3D roll to links on hover
+        rollingLinks: true,
+
+        // UI style
+        theme: query.theme || 'default', // default/neon
+
+        // Transition style
+        transition: query.transition || 'default' // default/cube/page/concave/linear(2d)
+      });
+
+      hljs.initHighlightingOnLoad();
+    </script>
+
+  </body>
+</html>

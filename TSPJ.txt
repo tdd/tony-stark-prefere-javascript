@@ -1,0 +1,73 @@
+TSPJ
+
+Language :
+  ES5
+  ES.Next
+  CoffeeScript
+  Functional programming
+    Underscore.js :
+      http://underscorejs.org/
+      http://f.cl.ly/items/093o0l2Y3u130y0W0c0x/underscore-cheat-sheet.pdf
+Polyfills : http://addyosmani.com/polyfillthehtml5gaps/slides/#1
+AppCache : http://appcachefacts.info/
+Kick-ass sliders/slideshows : http://www.idangero.us/sliders/s6/
+Crypto : http://code.google.com/p/cryptico/
+Date/Time management:
+  http://momentjs.com/
+  https://github.com/ChiperSoft/Kalendae
+Advanced regexp : https://github.com/slevithan/XRegExp
+Quality :
+  JSLint
+  JSHint
+Graphics :
+  Raphael
+  WebGL
+  Three.js
+Charts :
+  Google Charts (bof)
+  http://www.highcharts.com (\o/)
+Storage :
+  localStorage
+  sessionStorage
+  IndexedDB
+Geolocation
+Offline/online
+Session info : https://github.com/codejoust/session.js
+Templating :
+  Mustache
+  Handlebars
+  Jade
+i18n :
+  http://slexaxton.github.com/Jed/
+  https://github.com/SlexAxton/messageformat.js
+tokenizing : https://github.com/NaturalNode/natural
+MVC :
+  Backbone
+    https://github.com/theironcook/Backbone.ModelBinder
+    Backbone.Mediator
+    …
+  Spine
+  Ember
+  MVC Module Magic : http://alexsexton.com/talks/backboneconf2012/#/
+Mid-level frameworks :
+  http://addyosmani.com/largescalejavascript/
+  http://brunch.io/
+  https://github.com/moviepilot/chaplin
+Full-fledged frameworks :
+  Batman.js
+  Tower.js
+Server-side :
+  Node.js
+  https://github.com/Benvie/Node.js-Ultra-REPL
+  Realtime client/server data sharing: http://nowjs.com/
+  Socket.IO
+Mobile
+  https://github.com/alexgibson/tap.js
+  http://www.iwebinspector.com/
+  http://brian.io/slides/debug-mobile/#/
+  Phonegap
+  Titanium
+  B2G
+Apps
+  Open Web Apps
+  Windows 8 / Metro / Surface
