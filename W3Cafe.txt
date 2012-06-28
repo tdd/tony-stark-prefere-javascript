@@ -22,13 +22,13 @@ PLAN DE PRES
 00:07 -> 00:10 - JS vs. jQuery
 00:10 -> 00:25 - 1. JS Blindé (Tests : Jasmine, QUnit?, Mocha, Selenium, PhantomJS+CasperJS [+Poltergeist on Capybara]… -- Docs: Docco, JSDoc…)
 
-00:25 -> 00:45 - 2. JS de fou côté client (ES5, ES6, Harmony, ecosys: offline/appcache, storage[LS/IDB/FS], connectivity [WS/SSE],
+00:25 -> 00:55 - 2. JS de fou côté client (ES5, ES6, Harmony, ecosys: offline/appcache, storage[LS/IDB/FS], connectivity [WS/SSE],
                     gfx [Canvas, WebGL, SVG, webfonts, reqAF/timing, CSS3-4 & CSS Filters], multimedia [A,V,AD API],
                     DAP [orientation, camera, contacts, gamepad], UX [fullscreen, pointer lock, dragdrop, web workers], Geoloc…)
                     -> Gros centre d'intérêt pour les game developers, notamment
                     -> B2G/Gaia ; avant ça, WebOS (Palm/HP) ; Windows 8 / Metro ; Chrome App Store/Market? ; Mozilla Web Apps spec / upcoming std
                     -> PhoneGap, Titanium, etc.  Applis hybrides (retrouver le Top-10 App Store iOS).
-00:45 -> 01:05 - 3. JS Serveur / hors-browser (JSC, PhantomJS et CasperJS, Node.js… moteurs V8, Rhino, SpiderMonkey?, etc.  Use-cases premiers pour Node,
+00:55 -> 01:05 - 3. JS Serveur / hors-browser (JSC, PhantomJS et CasperJS, Node.js… moteurs V8, Rhino, SpiderMonkey?, etc.  Use-cases premiers pour Node,
                     idéalement quelques métriques/benchmarks, super stories e.g. Sashimi, etc.)
 01:05 -> 01:20 - 4. JS en tant que bytecode (transpiling, et pas que CoffeeScript : Narcissus, Emscripten/LLJS, TameJS, ClosureScript, ADsafe, Roy…  Dart ;-))
                     -> https://github.com/jashkenas/coffee-script/wiki/List-of-languages-that-compile-to-JS

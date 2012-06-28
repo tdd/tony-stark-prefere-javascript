@@ -237,29 +237,137 @@
               <a href="http://jtaby.com/2012/04/23/modern-web-development-part-1.html#Memory%20">mémoire</a>,
               <a href="http://jtaby.com/2012/04/23/modern-web-development-part-1.html#The%20Profiles%20Panel%20">profiling</a>…
             </p>
+            <p class="fragment">Avec du code&nbsp;: <a href="https://developer.mozilla.org/en/Navigation_timing">Navigation Timing API</a></p>
             <p class="fragment">En <em>crowdsourcing</em>&nbsp;: <a href="http://jsperf.com/">JSPerf</a></p>
           </section>
         </section>
         
         <section id="crazy-client">
-          <!-- 20' -->
+          <!-- 30' -->
           <section>
             <h1>JS de fou côté client</h1>
-            <p>ES5, ES6, Harmony, ecosys: offline/appcache, storage[LS/IDB/FS], connectivity [WS/SSE],</p>
-            <p>gfx [Canvas, WebGL, SVG, webfonts, reqAF/timing, CSS3-4 & CSS Filters], multimedia [A,V,AD API],</p>
-            <p>DAP [orientation, camera, contacts, gamepad], UX [fullscreen, pointer lock, dragdrop, web workers], Geoloc…)</p>
-            <p>-> Gros centre d'intérêt pour les game developers, notamment</p>
-            <p>-> B2G/Gaia ; avant ça, WebOS (Palm/HP) ; Windows 8 / Metro ; Chrome App Store/Market? ; Mozilla Web Apps spec / upcoming std</p>
-            <p>-> PhoneGap, Titanium, etc.  Applis hybrides (retrouver le Top-10 App Store iOS).</p>
+            <!-- 
+            http://es5.github.com/
+              http://www.slideshare.net/BrendanEich/esnext + https://wiki.mozilla.org/ES6_plans
+            OFFLINE
+            https://developer.mozilla.org/en/Offline_resources_in_Firefox +
+              appcachefacts.info + https://speakerdeck.com/u/jaffathecake/p/application-cache-douchebag
+            STORAGE
+            http://playground.html5rocks.com/#localstorage
+              https://developer.mozilla.org/en/DOM/Storage
+              https://developer.mozilla.org/en/IndexedDB
+            NETWORK
+            https://developer.mozilla.org/en/WebSockets
+              Realtime client/server data sharing: http://nowjs.com/
+              Socket.IO: http://socket.io/
+              http://pusher.com/
+              https://developer.mozilla.org/en/Server-sent_events
+              https://wiki.mozilla.org/Services/Notifications
+            GFX
+            https://developer.mozilla.org/fr/HTML/Élément/canvas
+              https://developer.mozilla.org/en/WebGL/
+                http://mrdoob.github.com/three.js/
+              https://developer.mozilla.org/fr/SVG
+                http://raphaeljs.com/
+              http://www.w3.org/TR/css3-fonts/#font-resources
+                http://www.google.com/webfonts
+                https://typekit.com/
+                http://www.fontsquirrel.com/
+              https://developer.mozilla.org/en/DOM/window.requestAnimationFrame
+              http://www.w3.org/TR/css3-transforms/
+                http://www.w3.org/TR/css3-transitions/
+                http://www.w3.org/TR/css3-animations/
+                http://www.html5rocks.com/en/tutorials/filters/understanding-css/
+            MMA
+              https://developer.mozilla.org/fr/Utilisation_d'audio_et_video_dans_Firefox
+              https://wiki.mozilla.org/Audio_Data_API
+            UX
+              https://developer.mozilla.org/en/DOM/Using_full-screen_mode
+              https://developer.mozilla.org/en/API/Pointer_Lock_API
+              https://developer.mozilla.org/en/DragDrop/Drag_and_Drop
+              https://developer.mozilla.org/Using_DOM_workers
+              https://developer.mozilla.org/en/API/Gamepad/Using_Gamepad_API
+            Game frameworks
+              Impact
+              Aries
+              Zynga…
+              numerous others?
+            MVC / App Frameworks
+              Backbone
+                https://github.com/theironcook/Backbone.ModelBinder
+                Backbone.Mediator
+                …
+              Spine
+              Ember
+              MVC Module Magic : http://alexsexton.com/talks/backboneconf2012/#/
+              Mid-level frameworks :
+                http://addyosmani.com/largescalejavascript/
+                http://brunch.io/
+                https://github.com/moviepilot/chaplin
+              Full-fledged frameworks :
+                Batman.js
+                Tower.js
+            DAP
+              https://developer.mozilla.org/en/Online_and_offline_events
+              https://developer.mozilla.org/en/Detecting_device_orientation
+              http://www.w3.org/TR/2012/CR-battery-status-20120508/
+              http://www.w3.org/TR/2012/WD-html-media-capture-20120529/
+                http://dev.w3.org/2011/webrtc/editor/getusermedia.html
+              http://www.w3.org/TR/2011/WD-netinfo-api-20110607/
+              http://dvcs.w3.org/hg/dap/raw-file/tip/proximity/Overview.html
+              http://www.w3.org/TR/2012/CR-vibration-20120508/
+              http://dvcs.w3.org/hg/web-intents/raw-file/tip/spec/Overview.html
+              http://www.w3.org/TR/2011/WD-calendar-api-20110419/
+              http://www.w3.org/TR/contacts-api/
+              https://developer.mozilla.org/en/Using_files_from_web_applications/
+              https://developer.mozilla.org/en/Using_geolocation
+            Apps
+              Widgets OSX / Win7…  Eh oui…
+              Chrome Web Store : https://chrome.google.com/webstore/category/home
+                https://developers.google.com/chrome/web-store/docs/
+              Mozilla Web Apps & Mozilla Marketplace : https://developer.mozilla.org/en-US/apps/
+              Windows 8 / Metro (clin d’œil à David Rousset)
+            Mobile
+              clin d’œil à Dominique
+              https://github.com/alexgibson/tap.js
+              http://www.iwebinspector.com/
+              http://brian.io/slides/debug-mobile/#/
+              PhoneGap, Titanium…  Applis hybrides (retrouver le Top-10 App Store iOS).
+              History: webOS (Palm/HP)
+              B2G & Gaia
+            Cool libs I’d like to mention
+              Underscore.js :
+                http://underscorejs.org/
+                http://f.cl.ly/items/093o0l2Y3u130y0W0c0x/underscore-cheat-sheet.pdf
+              Polyfills : http://addyosmani.com/polyfillthehtml5gaps/slides/#1
+              Kick-ass sliders/slideshows : http://www.idangero.us/sliders/s6/
+              Crypto : http://code.google.com/p/cryptico/
+              Date/Time management:
+                http://momentjs.com/
+                https://github.com/ChiperSoft/Kalendae
+              Advanced regexp : https://github.com/slevithan/XRegExp
+              Charts :
+                Google Charts (bof)
+                http://www.highcharts.com (\o/)
+              Session info : https://github.com/codejoust/session.js
+              Templating :
+                Mustache
+                Handlebars
+                Jade
+              i18n :
+                http://slexaxton.github.com/Jed/
+                https://github.com/SlexAxton/messageformat.js
+              tokenizing : https://github.com/NaturalNode/natural
+            -->
           </section>
         </section>
         
         <section id="outside-browsers">
-          <!-- 20' -->
+          <!-- 10' -->
           <section>
             <h1>JS hors du navigateur</h1>
             
-            <p>JSC, PhantomJS et CasperJS, Node.js… moteurs V8, Rhino, SpiderMonkey?, etc.  Use-cases premiers pour Node,
+            <p>JSC, PhantomJS et CasperJS, Node.js, https://github.com/Benvie/Node.js-Ultra-REPL… moteurs V8, Rhino, SpiderMonkey?, etc.  Use-cases premiers pour Node,
             idéalement quelques métriques/benchmarks, super stories e.g. Sashimi, etc.)</p>
           </section>
         </section>
