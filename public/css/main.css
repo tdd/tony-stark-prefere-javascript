@@ -132,6 +132,7 @@ body {
 .reveal strong, 
 .reveal b {
 	font-weight: bold;
+	text-shadow: 0 0 2px yellow;
 }
 
 .reveal em, 

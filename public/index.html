@@ -246,119 +246,220 @@
           <!-- 30' -->
           <section>
             <h1>JS de fou côté client</h1>
-            <!-- 
-            http://es5.github.com/
-              http://www.slideshare.net/BrendanEich/esnext + https://wiki.mozilla.org/ES6_plans
-            OFFLINE
-            https://developer.mozilla.org/en/Offline_resources_in_Firefox +
-              appcachefacts.info + https://speakerdeck.com/u/jaffathecake/p/application-cache-douchebag
-            STORAGE
-            http://playground.html5rocks.com/#localstorage
-              https://developer.mozilla.org/en/DOM/Storage
-              https://developer.mozilla.org/en/IndexedDB
-            NETWORK
-            https://developer.mozilla.org/en/WebSockets
-              Realtime client/server data sharing: http://nowjs.com/
-              Socket.IO: http://socket.io/
-              http://pusher.com/
-              https://developer.mozilla.org/en/Server-sent_events
-              https://wiki.mozilla.org/Services/Notifications
-            GFX
-            https://developer.mozilla.org/fr/HTML/Élément/canvas
-              https://developer.mozilla.org/en/WebGL/
-                http://mrdoob.github.com/three.js/
-              https://developer.mozilla.org/fr/SVG
-                http://raphaeljs.com/
-              http://www.w3.org/TR/css3-fonts/#font-resources
-                http://www.google.com/webfonts
-                https://typekit.com/
-                http://www.fontsquirrel.com/
-              https://developer.mozilla.org/en/DOM/window.requestAnimationFrame
-              http://www.w3.org/TR/css3-transforms/
-                http://www.w3.org/TR/css3-transitions/
-                http://www.w3.org/TR/css3-animations/
-                http://www.html5rocks.com/en/tutorials/filters/understanding-css/
-            MMA
-              https://developer.mozilla.org/fr/Utilisation_d'audio_et_video_dans_Firefox
-              https://wiki.mozilla.org/Audio_Data_API
-            UX
-              https://developer.mozilla.org/en/DOM/Using_full-screen_mode
-              https://developer.mozilla.org/en/API/Pointer_Lock_API
-              https://developer.mozilla.org/en/DragDrop/Drag_and_Drop
-              https://developer.mozilla.org/Using_DOM_workers
-              https://developer.mozilla.org/en/API/Gamepad/Using_Gamepad_API
-            Game frameworks
-              Impact
-              Aries
-              Zynga…
-              numerous others?
-            MVC / App Frameworks
-              Backbone
-                https://github.com/theironcook/Backbone.ModelBinder
-                Backbone.Mediator
-                …
-              Spine
-              Ember
-              MVC Module Magic : http://alexsexton.com/talks/backboneconf2012/#/
-              Mid-level frameworks :
-                http://addyosmani.com/largescalejavascript/
-                http://brunch.io/
-                https://github.com/moviepilot/chaplin
-              Full-fledged frameworks :
-                Batman.js
-                Tower.js
-            DAP
-              https://developer.mozilla.org/en/Online_and_offline_events
-              https://developer.mozilla.org/en/Detecting_device_orientation
-              http://www.w3.org/TR/2012/CR-battery-status-20120508/
-              http://www.w3.org/TR/2012/WD-html-media-capture-20120529/
-                http://dev.w3.org/2011/webrtc/editor/getusermedia.html
-              http://www.w3.org/TR/2011/WD-netinfo-api-20110607/
-              http://dvcs.w3.org/hg/dap/raw-file/tip/proximity/Overview.html
-              http://www.w3.org/TR/2012/CR-vibration-20120508/
-              http://dvcs.w3.org/hg/web-intents/raw-file/tip/spec/Overview.html
-              http://www.w3.org/TR/2011/WD-calendar-api-20110419/
-              http://www.w3.org/TR/contacts-api/
-              https://developer.mozilla.org/en/Using_files_from_web_applications/
-              https://developer.mozilla.org/en/Using_geolocation
-            Apps
-              Widgets OSX / Win7…  Eh oui…
-              Chrome Web Store : https://chrome.google.com/webstore/category/home
-                https://developers.google.com/chrome/web-store/docs/
-              Mozilla Web Apps & Mozilla Marketplace : https://developer.mozilla.org/en-US/apps/
-              Windows 8 / Metro (clin d’œil à David Rousset)
-            Mobile
-              clin d’œil à Dominique
-              https://github.com/alexgibson/tap.js
-              http://www.iwebinspector.com/
-              http://brian.io/slides/debug-mobile/#/
-              PhoneGap, Titanium…  Applis hybrides (retrouver le Top-10 App Store iOS).
-              History: webOS (Palm/HP)
-              B2G & Gaia
-            Cool libs I’d like to mention
-              Underscore.js :
-                http://underscorejs.org/
-                http://f.cl.ly/items/093o0l2Y3u130y0W0c0x/underscore-cheat-sheet.pdf
-              Polyfills : http://addyosmani.com/polyfillthehtml5gaps/slides/#1
-              Kick-ass sliders/slideshows : http://www.idangero.us/sliders/s6/
-              Crypto : http://code.google.com/p/cryptico/
-              Date/Time management:
-                http://momentjs.com/
-                https://github.com/ChiperSoft/Kalendae
-              Advanced regexp : https://github.com/slevithan/XRegExp
-              Charts :
-                Google Charts (bof)
-                http://www.highcharts.com (\o/)
-              Session info : https://github.com/codejoust/session.js
-              Templating :
-                Mustache
-                Handlebars
-                Jade
-              i18n :
-                http://slexaxton.github.com/Jed/
-                https://github.com/SlexAxton/messageformat.js
-              tokenizing : https://github.com/NaturalNode/natural
-            -->
+            
+            <p>
+              Déjà, je vous rappelle qu’on a
+              <a href="http://es5.github.com/" target="_blank">ES5</a>
+              et bientôt
+              <a href="https://wiki.mozilla.org/ES6_plans" target="_blank">ES6</a>
+              /
+              <a href="http://www.slideshare.net/BrendanEich/esnext" target="_blank">ES.next / Harmony</a>
+            </p>
+            <p class="fragment">
+              Nous allons parler d’<strong>offline</strong>, de <strong>stockage client</strong>,
+              de <strong>réseau</strong>, de <strong>graphisme</strong>, de <strong>multimédia</strong>,
+              d’<strong>UX</strong>, de <strong>jeux</strong>, de <strong>frameworks applicatifs</strong>,
+              de <strong>capacités du périphérique</strong> et de <strong>mobile</strong>.  Rien que ça.
+            </p>
+            <p class="fragment">Et aussi de quelques p’tites libs que j’adore et qui gagnent à être connues.</p>
+          </section>
+
+          <section>
+            <h1>Offline</h1>
+
+            <h3>Détecter la connectivité</h3>
+
+            <p><a href="https://developer.mozilla.org/en/Online_and_offline_events" target="_blank">Événements dédiés</a> sur <code>window</code></p>
+            <p>Propriété <code>navigator.onLine</code></p>
+
+            <h3>Application cache</h3>
+
+            <p>Manifeste des parties de l’appli qu’on peut mettre en cache, remplacer si offline, ou exigeant l’online</p>
+            <p><a href="https://developer.mozilla.org/en/Offline_resources_in_Firefox" target="_blank">Bonnes docs chez Mozilla</a> (come toujours…)</p>
+            <p>Mais attention&nbsp;: <a href="https://speakerdeck.com/u/jaffathecake/p/application-cache-douchebag" target="_blank">AppCache est un connard</a></p>
+            <p>…heureusement, on a cet <a href="http://appcachefacts.info" target="_blank">excellent redux</a>.</p>
+            </p>
+          </section>
+
+          <section>
+            <h1>Stockage côté client</h1>
+            
+            <p>Multitude d’utilisation possibles pour une meilleure UX&nbsp;: auto-save, pile undo/redo, profil/préférences…</p>
+            <h3>3 technos principales</h3>
+            <p><a href="http://playground.html5rocks.com/#localstorage" target="_blank">Local persistent</a> avec <code>localStorage</code></p>
+            <p><a href="https://developer.mozilla.org/en/DOM/Storage" target="_blank">Local temporaire</a> avec <code>sessionStorage</code></p>
+            <p><a href="https://developer.mozilla.org/en/IndexedDB" target="_blank">Gros persistent</a> avec IndexedDB</p>
+          </section>
+          
+          <section>
+            <h1>Au-delà d’Ajax</h1>
+            
+            <p>Ajax multi-domaines avec <a href="http://www.w3.org/TR/cors/">CORS</a></p>
+            <p>Plus de possibilités d’envoi avec <a href="http://www.w3.org/TR/XMLHttpRequest2/">XHR2</a> (dont l’upload)</p>
+
+            <div class="fragment">
+              <h3>Les WebSockets</h3>
+
+              <p><a href="https://developer.mozilla.org/en/WebSockets">Canaux temps réel full-duplex client/serveur</a></p>
+            </div>
+            <p class="fragment">La solution leader&nbsp;: <a href="http://socket.io/">Socket.IO</a>.  Exemple rigolo&nbsp;: <a href="http://nowjs.com/">now.js</a></p>
+            <p class="fragment">Pour du Serveur &rArr; Client seulement, on peut déléguer à <a href="http://pusher.com/">Pusher</a> ou passer par les <a href="https://developer.mozilla.org/en/Server-sent_events">Server-Sent Events</a></p>
+            <p class="fragment">Mozilla bosse sur les <a href="https://wiki.mozilla.org/Services/Notifications">notifications</a> «&nbsp;push&nbsp;» aussi…</p>
+          </section>
+          
+          <section>
+            <h1>GFX (2D)</h1>
+            
+            <p>Dessiner ce qu’on veut avec <a href="https://developer.mozilla.org/fr/HTML/Élément/canvas">&lt;canvas&gt;</a></p>
+            <p class="fragment">
+              Jouer la finesse avec <a href="https://developer.mozilla.org/fr/SVG">SVG</a> (avec ou sans <a href="http://raphaeljs.com/">Raphael.js</a>)<br/>
+              (ou à l’intersection canvas/SVG, on a <a href="http://paperjs.org/about/">Paper.js</a>…)
+            </p>
+            <p class="fragment">Optimiser son timing avec <a href="https://developer.mozilla.org/en/DOM/window.requestAnimationFrame">requestAnimationFrame</a></p>
+
+            <div class="fragment">
+              <h3>Et rien qu’avec CSS…</h3>
+
+              <p>On a les <a href="http://www.w3.org/TR/css3-transforms/">transforms</a>,
+                les <a href="http://www.w3.org/TR/css3-transitions/">transitions</a>
+                et les <a href="http://www.w3.org/TR/css3-animations/">animations</a></p>
+            </div>
+            <p class="fragment">Et on voit arriver le début des <a href="http://www.html5rocks.com/en/tutorials/filters/understanding-css/">filtres</a>&nbsp;!</p>
+          </section>
+          
+          <section>
+            <h1>GFX (3D)</h1>
+            
+            <p>On a du lourd directement&nbsp;: <a href="https://developer.mozilla.org/en/WebGL/">WebGL</a></p>
+            <p>Un peu chaud à prendre en main, mais on a des super surcouches, notamment le très populaire <a href="http://mrdoob.github.com/three.js/">three.js</a></p>
+            <p>Accéléré GPU par les navigateurs modernes, on atteint des performances qui font plaisir…</p>
+          </section>
+          
+          <section>
+            <h1>GFX (typographie)</h1>
+            
+            <p>Désormais dispo partout&nbsp;: <a href="http://www.w3.org/TR/css3-fonts/#font-resources">@font-face</a></p>
+            <p>La plaie à gérer manuellement car foutoir de formats</p>
+            <p>Heureusement, on a <a href="https://typekit.com/">TypeKit</a>, <a href="http://fontdeck.com/">FontDeck</a>, <a href="http://www.fontsquirrel.com/">FontSquirrel</a> ou à défaut <a href="http://www.google.com/webfonts">Google Web Fonts Directory</a></p>
+          </section>
+          
+          <section>
+            <h1>Multimédia</h1>
+            
+            <p>On peut désormais jouer de l’audio et de la vidéo <a href="https://developer.mozilla.org/fr/Utilisation_d'audio_et_video_dans_Firefox">en natif</a>.</p>
+            <p class="fragment">En théorie.</p>
+            <p class="fragment">Gros clusterfuck sur les formats</p>
+            <p class="fragment">Mais y’a des <a href="http://sublimevideo.net/">surcouches</a> et des <a href="http://zencoder.com/">services</a> <a href="http://vid.ly">en</a> <a href="http://www.viddler.com/">ligne</a></p>
+            <p class="fragment">Markup et API assez pointus/configurables</p>
+            <p class="fragment">Quant au son, on peut aussi <a href="https://wiki.mozilla.org/Audio_Data_API">le générer et le manipuler</a>&nbsp;!</p>
+          </section>
+
+          <section>
+            <h1>UX</h1>
+            <h4>Y’a pas qu’Ajax et les lightboxes dans la vie…</h4>
+
+            <p class="fragment"><a href="https://developer.mozilla.org/en/DOM/Using_full-screen_mode">Full Screen</a></p>
+            <p class="fragment"><a href="https://developer.mozilla.org/en/API/Pointer_Lock_API">Pointer Lock</a></p>
+            <p class="fragment"><a href="https://developer.mozilla.org/en/DragDrop/Drag_and_Drop">Drag and Drop</a> (y compris avec <strong>le reste de l’OS</strong>)</p>
+            <p class="fragment"><a href="https://developer.mozilla.org/Using_DOM_workers">Gamepad</a></p>
+            <p class="fragment"><a href="https://developer.mozilla.org/en/API/Gamepad/Using_Gamepad_API">Web Workers</a></p>
+          </section>
+          
+          <section>
+            <h1>La vie n’est qu’un jeu</h1>
+            
+            <p>Nombreux moteurs de jeux en JS</p>
+            <p>Regardez ce que fait Zynga avec Aves…</p>
+            <p><a href="http://impactjs.com/">Impact</a>, <a href="http://www.scirra.com/construct2">Construct 2</a>, <a href="http://craftyjs.com/">Crafty</a>…</p>
+            <p>On a eu plein de <a href="http://www.currantcat.com/convergence/">pixel</a> <a href="http://browserquest.mozilla.org/">tributes</a>, mais ne vous y trompez pas&nbsp;: on a <a href="http://www.scirra.com/arcade/addicting-rotary-games">plein de trucs</a> plus modernes aussi</p>
+          </section>
+
+          <section>
+            <h1>App Frameworks</h1>
+            
+            <p>Vraie tendance forte.  <a href="http://backbonejs.org/">Backbone</a> a mis le feu aux poudres</p>
+            <p class="fragment">Plein ont suivi&nbsp;: <a href="http://spinejs.com/">Spine</a>, <a href="http://emberjs.com/">Ember</a>…<br/>ou construit par-dessus&nbsp;: <a href="https://github.com/chaplinjs/chaplin">Chaplin</a>, <a href="http://walmartlabs.github.com/thorax/">Thorax</a>…</p>
+            <p class="fragment">Mon p’tit chéri&nbsp;: <a href="http://batmanjs.org/">Batman.js</a></p>
+            <p class="fragment">
+              Complexité/archi croissantes du JS côté client&nbsp;:<br/>
+              <a href="http://addyosmani.com/largescalejavascript/">prenez du recul</a> et suivez de <a href="http://alexsexton.com/talks/backboneconf2012/#/">vraies bonnes pratiques</a></p>
+            
+            <div class="fragment">
+              <h3>Full stack</h3>
+
+              <p>Client + Serveur&nbsp;?  J’adore <a href="http://towerjs.org/">Tower.js</a></p>
+            </div>
+          </section>
+
+          <section>
+            <h1>All your device are belong to me</h1>
+            
+            <p>Les <strong>Device APIs</strong> vont nous permettre d’accéder directement à de nombreuses capacités du périphérique, qu’il soit classique ou mobile.</p>
+            <p>
+              <span class="fragment"><a href="https://developer.mozilla.org/en/Detecting_device_orientation">Orientation</a>,</span>
+              <span class="fragment"><a href="https://developer.mozilla.org/en/Using_geolocation">géolocalisation</a>,</span>
+              <span class="fragment"><a href="http://www.w3.org/TR/2012/CR-battery-status-20120508/">niveau de batterie</a>,</span>
+              <span class="fragment"><a href="http://www.w3.org/TR/2012/WD-html-media-capture-20120529/">webcam et micro</a>,</span>
+              <span class="fragment"><a href="http://www.w3.org/TR/2011/WD-netinfo-api-20110607/">connexion réseau</a>,</span>
+              <span class="fragment"><a href="http://dvcs.w3.org/hg/dap/raw-file/tip/proximity/Overview.html">NFC</a>,</span>
+              <span class="fragment"><a href="http://www.w3.org/TR/2012/CR-vibration-20120508/">vibreur</a>…</span>
+            </p>
+            <p class="fragment">
+              Mais aussi la possibilité d’aller piocher dans
+              les <a href="http://www.w3.org/TR/2011/WD-calendar-api-20110419/">fichiers</a>,
+              le <a href="https://developer.mozilla.org/en/Using_files_from_web_applications/">calendrier</a>,
+              les <a href="http://www.w3.org/TR/contacts-api/">contacts</a>,
+              les <a href="http://dev.w3.org/2011/webrtc/editor/getusermedia.html">photos et vidéos</a>…
+            </p>
+          </section>
+          
+          <section>
+            <h1>On fait des apps&nbsp;!</h1>
+            
+            <p>On faisait déjà des widgets OSX ou Win7 (clips IE)…</p>
+            <p class="fragment">Il y a aussi déjà le <a href="https://chrome.google.com/webstore/category/home">Chrome Web Store</a></p>
+            <p class="fragment">Et comme l’a dit David, JS &rArr; apps Windows 8 / Metro</p>
+            <p class="fragment">
+              Mozilla travaille à un standard <a href="https://developer.mozilla.org/en-US/apps/">Web Apps</a>
+              et va fournir une <a href="https://marketplace.mozilla.org/">marketplace</a> et son implémentation open-source
+            </p>
+            <p class="fragment"><strong>Ça sent bon tout ça&nbsp;!</strong></p>
+          </section>
+
+          <section>
+            <h1>Mobile Web/Apps</h1>
+            
+            <p>Dominique en parle à côté&nbsp;!</p>
+            <p>Le Web mobile est en train de doubler le desktop…</p>
+            <p>On commence à avoir <a href="http://www.iwebinspector.com/">de bons</a> <a href="http://brian.io/slides/debug-mobile/#/">outils</a></p>
+            <p>Il faut toutefois <a href="http://brian.io/slides/debug-mobile/#/">uniformiser les inputs</a> mobile/desktop</p>
+            <br/>
+            <p class="fragment">Voie hybride&nbsp;: <a href="http://brian.io/slides/debug-mobile/#/">PhoneGap</a>, <a href="http://www.appcelerator.com/">Titanium</a>…</p>
+            <p class="fragment">
+              Voie native&nbsp;: après feu <a href="http://fr.wikipedia.org/wiki/HP_webOS">webOS</a>, je bave sur
+              <a href="http://www.mozilla.org/en-US/b2g/">B2G</a> et <a href="https://wiki.mozilla.org/Gaia">Gaia</a>…
+            </p>
+          </section>
+
+          <section>
+            <h1>Une dernière chose…</h1>
+            
+            <p>Quelques libs JS, en vrac, qui gagnent à être connues&nbsp;:</p>
+            
+            <p>
+              <a href="http://underscorejs.org/">Underscore.js</a>,
+              <a href="https://github.com/slevithan/XRegExp">XRegExp</a>,
+              <a href="http://momentjs.com/">Moment.js</a> et <a href="https://github.com/ChiperSoft/Kalendae">Kalendae</a>,
+              <a href="http://www.highcharts.com">Highcharts</a>,
+              <a href="https://github.com/codejoust/session.js">session.js</a>,
+              <a href="https://github.com/SlexAxton/messageformat.js">messageformat.js</a>,
+              <a href="http://code.google.com/p/cryptico/">Cryptico</a>.
+            </p>
+            <p>
+              Côté templating, vous connaissez sûrement
+              <a href="http://mustache.github.com/">Mustache</a> et <a href="http://handlebarsjs.com/">Handlebars</a>,
+              mais vous devriez regarder <a href="http://jade-lang.com/">Jade</a>.
+            </p>
           </section>
         </section>
         
@@ -366,9 +467,44 @@
           <!-- 10' -->
           <section>
             <h1>JS hors du navigateur</h1>
+
+            <p>JS était initialement <strong>aussi</strong> prévu pour le serveur…</p>
+            <p class="fragment">C’est Node.js qui a rescussité ça</p>
+            <p class="fragment">Parlons un peu des moteurs, consoles et navigateurs «&nbsp;headless&nbsp;»…</p>
+          </section>
+          
+          <section>
+            <h1>Moteurs</h1>
             
-            <p>JSC, PhantomJS et CasperJS, Node.js, https://github.com/Benvie/Node.js-Ultra-REPL… moteurs V8, Rhino, SpiderMonkey?, etc.  Use-cases premiers pour Node,
+            <p><strong>V8</strong>&nbsp;: runtime de Google utilisée notamment par Chrome et Node.js.  Très performant.</p>
+            <p class="fragment"><strong>Rhino</strong>&nbsp;: runtime en Java de Mozilla. Compatible JS 1.7.</p>
+            <p class="fragment"><strong>JavaScriptCore / Squirrelfish / Nitro</strong>&nbsp;: runtimes d’Apple (Mac, iOS)</p>
+          </section>
+
+          <section>
+            <h1>REPL</h1>
+            
+            <p><strong>jsc</strong>&nbsp;: JavaScriptCore sur Mac.</p>
+            <p><strong>node</strong>&nbsp;: Node.js (REPL ou processus serveur…)</p>
+            <p>(à découvrir aussi&nbsp;: <a href="https://github.com/Benvie/Node.js-Ultra-REPL">Node.js-Ultra-REPL</a>)</p>
+            <p><strong>java -jar js.jar</strong>&nbsp;: Rhino Shell</p>
+          </section>
+          
+          <section>
+            <h1>Node.js</h1>
+            
+            <p>FIXME/RESUME</p>
+            <p>Use-cases premiers pour Node,
             idéalement quelques métriques/benchmarks, super stories e.g. Sashimi, etc.)</p>
+          </section>
+          
+          <section>
+            <h1>Headless browsers</h1>
+            
+            <p><a href="http://phantomjs.org/">PhantomJS</a>&nbsp;: WebKit (dont JavaScript)</p>
+            <p><a href="http://casperjs.org/">CasperJS</a>&nbsp;: scripting de PhantomJS</p>
+            <p><a href="http://busterjs.org/">BusterJS</a>&nbsp;: couteau suisse d’automatisation JS</p>
+            <p>Hélas pas encore de Gecko ni d’IE en headless…  BrowserStack + bunyip&nbsp;!</p>
           </section>
         </section>
         
@@ -376,6 +512,8 @@
           <!-- 15' -->
           <section>
             <h1>JS comme langage cible</h1>
+            
+            <p>FIXME</p>
             <p>(transpiling, et pas que CoffeeScript : Narcissus, Emscripten/LLJS, TameJS, ClosureScript, ADsafe, Roy…  Dart ;-))</p>
             <p>-> https://github.com/jashkenas/coffee-script/wiki/List-of-languages-that-compile-to-JS</p>
             <p>-> JS succeeds where Java failed.  JVM remains a prominent malware vector, e.g. Flashback.</p>
