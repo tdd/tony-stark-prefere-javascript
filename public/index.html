@@ -493,9 +493,12 @@
           <section>
             <h1>Node.js</h1>
             
-            <p>FIXME/RESUME</p>
-            <p>Use-cases premiers pour Node,
-            idéalement quelques métriques/benchmarks, super stories e.g. Sashimi, etc.)</p>
+            <p>Merci Ryan Dahl, hein, quand même.</p>
+            <p class="fragment">A remis l’asynchrone (notamment I/O) au cœur du débat</p>
+            <p class="fragment">Socle de référence pour les web sockets</p>
+            <p class="fragment">Gros atout presque dès le début&nbsp;: <a href="http://npmjs.org/">npm</a></p>
+            <p class="fragment">Explosion cambrienne de projets, là…</p>
+            <p class="fragment">Performances ahurissantes.  Ex. <a href="https://github.com/mabels/Sashimi">Sashimi</a>.</p>
           </section>
           
           <section>
@@ -513,11 +516,48 @@
           <section>
             <h1>JS comme langage cible</h1>
             
-            <p>FIXME</p>
-            <p>(transpiling, et pas que CoffeeScript : Narcissus, Emscripten/LLJS, TameJS, ClosureScript, ADsafe, Roy…  Dart ;-))</p>
-            <p>-> https://github.com/jashkenas/coffee-script/wiki/List-of-languages-that-compile-to-JS</p>
-            <p>-> JS succeeds where Java failed.  JVM remains a prominent malware vector, e.g. Flashback.</p>
-            <p>-> http://www.zdnet.com/blog/security/cross-platform-malware-exploits-java-to-attack-pcs-and-macs/11739</p>
+            <p class="fragment">JavaScript n’est pas utilisé qu’en tant que tel,<br/><strong>loin s’en faut</strong></p>
+            <p class="fragment">Les runtimes deviennent si quali, si rapides, si <strong>omniprésentes</strong>, que ça fait un excellent «&nbsp;bytecode&nbsp;», au «&nbsp;cible de compilation&nbsp;».</p>
+            <p class="fragment">On parle de <strong>transpiling</strong></p>
+          </section>
+
+          <section>
+            <h1>CoffeeScript</h1>
+            
+            <p><strong>La meilleure invention depuis le pain tranché&nbsp;!</strong></p>
+            <p class="fragment">Absolument <strong>pas</strong> «&nbsp;JS pour les noobs&nbsp;»&nbsp;: les gurus adorent…</p>
+            <p class="fragment">Plus <strong>lisible</strong></p>
+            <p class="fragment">Promeut les <strong>bonnes pratiques</strong></p>
+            <p class="fragment">Génère du code <strong>clean, universel et performant</strong></p>
+            <p class="fragment">Grosse inspiration pour ES.next</p>
+            <p class="fragment"><a href="http://coffeescript.org/">coffeescript.org</a></p>
+          </section>
+          
+          <section>
+            <h1>Mais pas que…</h1>
+              
+            <p>
+              <span class="fragment"><a href="" target="_blank">Narcissus</a>,</span>
+              <span class="fragment"><a href="" target="_blank">TameJS</a>,</span>
+              <span class="fragment"><a href="" target="_blank">ClosureScript</a>,</span>
+              <br/>
+              <span class="fragment"><a href="" target="_blank">ADsafe</a>,</span>
+              <span class="fragment"><a href="" target="_blank">Roy</a>…</span>
+            </p>
+            <p class="fragment"><a href="" target="_blank">Dart</a></p>
+            <p class="fragment">(LOL)</p>
+            <br/>
+            <p class="fragment"><a href="https://github.com/jashkenas/coffee-script/wiki/List-of-languages-that-compile-to-JS">Et plein d’autres encore&nbsp;!</a></p>
+          </section>
+          
+          <section>
+            <h1>Emscripten / LLJS</h1>
+            
+            <p>Compilez vos libs natives préférées… vers JS</p>
+            <p>Pas encore de plugin&nbsp;? On se débrouille&nbsp;!</p>
+            <p>Crypto, réseau, graphisme, SGBD, codecs…</p>
+            <p>Les performances se rapprochent doucement de celles de la version native&nbsp;! <em>We live in the future!</em></p>
+            <p><a href="https://github.com/kripken/emscripten/wiki">Emscripten sur Github</a></p>
           </section>
         </section>
         
@@ -526,7 +566,38 @@
           <section>
             <h1>Où fouiller&nbsp;?</h1>
             
-            <p>(ni Dev…z ni W3Schools, mais MDN, DailyJS, JS Weekly, prominent tweeters [Paul Rouget, Paul Irish, Brendan Eich, etc.], parisjs, w3café, meetups, JSConf.eu/us, Fluent, Backboneconf, Nodeconf, Nodejitsu, JS Attitude…)</p>
+            <h3>Pas sur…</h3>
+            <p>
+              <s>developpez.*</s>, <s>commentcamarche.net</s>, <s>w3schools</s>
+            </p>
+
+            <h3>Mais sur…</h3>
+            <p>
+              Docs / veille&nbsp;:
+              <a href="https://developer.mozilla.org">MDN</a>,
+              <a href="http://dailyjs.com/">DailyJS</a>,
+              <a href="http://javascriptweekly.com/">JavaScript Weekly</a>
+            </p>
+            <p>
+              Pundits&nbsp;:
+              <a href="http://twitter.com/paulrouget">@paulrouget</a>,
+              <a href="http://twitter.com/paul_irish">@paul_irish</a>,
+              <a href="http://twitter.com/BrendanEich">@BrendanEich</a>…
+            </p>
+            <p>
+              Meetups et conférences&nbsp;:
+              <a href="http://parisjs.org/">parisjs</a>,
+              <a href="http://france.w3cafe.org/">w3café</a>,
+              <a href="http://jsconf.eu">JSConf.eu</a>, <a href="http://jsconf.us">JSConf.us</a>,
+              <a href="http://fluentconf.com/">Fluent</a>,
+              <a href="http://backboneconf.com/">Backboneconf</a>,
+              <a href="http://www.nodeconf.com/">Nodeconf</a>…
+            </p>
+            <p>
+              Formations&nbsp;:
+              <a href="http://js-attitude.fr/">JS Attitude</a>,
+              <a href="http://nodejitsu.com/">Nodejitsu</a>…
+            </p>
           </section>
         </section>
         
@@ -534,8 +605,23 @@
           <!-- 15' -->
           <section>
             <h1>Conclusion</h1>
-            <p>(JS langage n°1 [trends Github à l'appui], vastes opportunités de carrière), remerciements, Q/R</p>
+            
+            <h2>JS est le langage n°1</h2>
+            <p>
+              <a href="https://github.com/languages">Mais si</a>.
+              <a href="http://skitch.com/sogrady/g97x7/dataists-020711">Je vous jure</a>.
+            </p>
+            <p>Vastes opportunités de carrière</p>
+            <blockquote>
+            Je n’ai jamais rencontré un expert JavaScript au chômage
+            </blockquote>
+            <p><em><cite>— Rebecca Murphey</cite></em></p>
+            <br/>
           </section>
+        </section>
+
+        <section id="thank-you">
+          <h1>Merci.</h1>
         </section>
       </div>
 
